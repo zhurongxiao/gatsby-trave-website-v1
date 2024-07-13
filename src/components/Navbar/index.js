@@ -3,11 +3,13 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import {
     Nav,
-    NavbarCotainer,
+    NavbarContainer,
     NavLogo,
     MobileIcon,
     NavIcon,
-
+    NavMenu,
+    NavItem,
+    NavLinks
 } from './NavbarElements'
 const Navbar = () => {
     const [click, setClick] = useState(false)
@@ -31,7 +33,7 @@ const Navbar = () => {
         <>
             <IconContext.Provider value={{ color: '#141414' }}>
                 <Nav active={scroll} click={click} >
-                    <NavbarCotainer>
+                    <NavbarContainer>
                         <NavLogo to="/">
                             <NavIcon />
                             EXPLOR
@@ -39,7 +41,18 @@ const Navbar = () => {
                         <MobileIcon onClick={handleClick}>
                             {click ? <FaTimes /> : <FaBars />}
                         </MobileIcon>
-                    </NavbarCotainer>
+                        <NavMenu onClick={handleClick} click={click}>
+                            <NavItem>
+                                <NavLinks to="/">Home</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="/images">Images</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="/destinations">Destinations</NavLinks>
+                            </NavItem>
+                        </NavMenu>
+                    </NavbarContainer>
                 </Nav>
 
             </IconContext.Provider>
