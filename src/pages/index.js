@@ -4,12 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HeroSection from "../components/HeroSection"
+import Image from "../components/imgae"
 
 
 const IndexPage = () => (
   <Layout>
     <HeroSection />
-
+    <Image />
   </Layout>
 )
 
