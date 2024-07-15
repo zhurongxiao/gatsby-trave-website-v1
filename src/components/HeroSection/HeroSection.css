@@ -1,47 +1,68 @@
+/* 定义.hero-container类的样式 */
 .hero-container {
+    /* 设置背景图片，位置居中，大小覆盖整个容器，不重复 */
     background: url("../../images/background2.jpg") center center/cover no-repeat;
+    /* 设置容器高度为视窗高度 */
     height: 100vh;
+    /* 设置容器宽度为100% */
     width: 100%;
+    /* 使用Flex布局 */
     display: flex;
+    /* 内容垂直居中 */
     justify-content: center;
+    /* 内容沿主轴方向排列成一列 */
     flex-direction: column;
+    /* 内容水平居中 */
     align-items: center;
+    /* 添加内嵌阴影，形成半透明遮罩效果 */
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* 设置对象适应容器大小，不裁剪 */
     object-fit: contain;
+    /* 设置顶部外边距为-80px，用于调整页面布局 */
     margin-top: -80px;
 }
 
+/* 定义.hero-container内部h1元素的样式 */
 .hero-container > h1 {
+    /* 设置文本颜色为白色 */
     color: #fff;
+    /* 设置字体大小为100px */
     font-size: 100px;
+    /* 设置顶部内边距为0px */
     margin-top: 0px;
-
 }
 
-
+/* 定义.hero-container内部p元素的样式 */
 .hero-container > p {
+    /* 设置顶部外边距为80px */
     margin-top: 80px;
+    /* 设置文本颜色为白色 */
     color: #fff;
+    /* 设置字体大小为32px */
     font-size: 32px;
 }
 
+/* 定义.hero-btns类的样式 */
 .hero-btns {
+    /* 设置顶部外边距为32px */
     margin-top: 32px;
-
 }
 
-
+/* 媒体查询，当屏幕宽度小于等于960px时 */
 @media screen and (max-width: 960px) {
+    /* 修改.hero-container内部h1元素的字体大小为70px */
     .hero-container > h1 {
         font-size: 70px;
     }
 }
 
+/* 媒体查询，当屏幕宽度小于等于768px时 */
 @media screen and (max-width: 768px) {
+    /* 修改.hero-container内部h1元素的字体大小为60px */
     .hero-container > h1 {
         font-size: 60px;
     }
-
+    /* 修改.hero-container内部p元素的字体大小为30px */
     .hero-container > p {
         font-size: 30px;
     }
